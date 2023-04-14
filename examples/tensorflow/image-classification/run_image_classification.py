@@ -34,7 +34,7 @@ from PIL import Image
 
 import transformers
 from transformers import (
-    MODEL_FOR_IMAGE_CLASSIFICATION_MAPPING,
+    TF_MODEL_FOR_IMAGE_CLASSIFICATION_MAPPING,
     AutoConfig,
     AutoImageProcessor,
     DefaultDataCollator,
@@ -58,7 +58,7 @@ check_min_version("4.29.0.dev0")
 
 require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/image-classification/requirements.txt")
 
-MODEL_CONFIG_CLASSES = list(MODEL_FOR_IMAGE_CLASSIFICATION_MAPPING.keys())
+MODEL_CONFIG_CLASSES = list(TF_MODEL_FOR_IMAGE_CLASSIFICATION_MAPPING.keys())
 MODEL_TYPES = tuple(conf.model_type for conf in MODEL_CONFIG_CLASSES)
 
 
